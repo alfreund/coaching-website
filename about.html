@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Dr. Andrea Freund</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #F7F6F3;
+            color: #2B1810;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            background-color: #2B1810;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 25px;
+            text-decoration: none;
+            color: #F7F6F3;
+            font-weight: 400;
+            font-size: 18px;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #E5DDD6;
+        }
+
+        .main {
+            display: flex;
+            flex: 1;
+        }
+
+        .border {
+            background-color: #E5DDD6;
+            width: 17%;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            width: 90%;
+            flex-grow: 1;
+            background-color: #F7F6F3;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 20px;
+        }
+
+        .name-container {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 1px;
+            color: #2B1810;
+        }
+
+	.underline {
+            height: 2px;
+            background-color: #2B1810;
+            margin: 0 auto 20px;
+            width: 100%;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.8;
+            color: #2B1810;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .border {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            nav a {
+                margin: 0 15px;
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 20px 15px;
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="main">
+        <div class="border"></div>
+        <div class="container">
+            <div class="name-container">
+                <h1>    About    </h1>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <p>I'm Dr. Andrea Freund, an executive coach with a PhD in Management & Organizations from Stanford Graduate School of Business and over a decade of experience helping leaders excel in complex, high-performance environments.</p>
+                
+                <p>I have spent years rigorously researching and advising leaders on how they can make themselves, their teams, and their organizations more effective. As a behavioral scientist at Meta, I guide executives and teams through organizational challenges and am on the frontlines of conducting research to improve productivity, leader and manager effectiveness, and team dynamics. I started my career in executive communications at Google, helping senior leaders navigate high-pressure situations and strategically shape their communication to align with their goals.</p>
+                
+                <p>Unlike many coaches, I bring a rigorous background in the <em>science and psychology</em> behind effective leadership, combining that with hands-on experience advising senior leaders and a keen understanding of how we engage with others. My coaching is designed to be both strategic and actionable, whether you are navigating complex priorities as a leader, preparing for high-visibility moments, or striving for growth. I will partner with you to establish clear goals for our work together and sharpen your leadership skills so you can address emerging challenges with confidence and drive meaningful results for yourself and your organization.</p>
+            </div>
+        </div>
+        <div class="border"></div>
+    </div>
+</body>
+</html>
