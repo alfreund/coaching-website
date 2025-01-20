@@ -51,6 +51,11 @@
             flex: 1;
         }
 
+        .border {
+            background-color: #E5DDD6; 
+            width: 17%; /* Set border width */
+        }
+        
         .container {
             text-align: center;
             max-width: 1200px;
@@ -136,6 +141,12 @@
 
         .submit-button:hover {
             background-color: #4A2A19;
+        }
+
+        @media screen and (max-width: 1520px) {
+            .border {
+                display: none;
+            }
         }
 
         @media screen and (max-width: 768px) {
