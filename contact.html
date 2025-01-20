@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Dr. Andrea Freund</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #F7F6F3;
+            color: #2B1810;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            background-color: #2B1810;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 25px;
+            text-decoration: none;
+            color: #F7F6F3;
+            font-weight: 400;
+            font-size: 18px;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #E5DDD6;
+        }
+
+        .main {
+            display: flex;
+            flex: 1;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            width: 90%;
+            flex-grow: 1;
+            background-color: #F7F6F3;
+        }
+
+        .name-container {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 1px;
+            color: #2B1810;
+        }
+
+        .underline {
+            height: 2px;
+            background-color: #2B1810;
+            margin: 0 auto 20px;
+            width: 100%;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 40px;  /* Increased gap between first and last name */
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            flex: 1;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #2B1810;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #E5DDD6;
+            border-radius: 4px;
+            font-family: 'Lato', sans-serif;
+            font-size: 16px;
+            background-color: #fff;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background-color: #2B1810;
+            color: #F7F6F3;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #4A2A19;
+        }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            nav a {
+                margin: 0 15px;
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 14px;
+            }
+
+            .container {
+                padding: 20px 15px;
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="main">
+        <div class="container">
+            <div class="name-container">
+                <h1>Get in Touch</h1>
+                <div class="underline"></div>
+            </div>
+            <form class="contact-form" action="https://formsubmit.co/andreafreund@gmail.com" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name*</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name*</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message*</label>
+                    <textarea id="message" name="message" placeholder="Please tell me a little about what you are looking for and any questions you may have." required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
