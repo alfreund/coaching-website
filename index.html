@@ -21,135 +21,158 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: 'Lato', sans-serif;
-            line-height: 1.6;
             margin: 0;
+            font-family: 'Lato', sans-serif;
+	    color: #22333B
+	    margin: 0;
             padding: 0;
-            background-color: #F7F6F3;
-            color: #2B1810;
             display: flex;
             flex-direction: column;
             height: 100vh; /* Ensure the body takes the full height */
         }
+	.main { 
+		background-color: transparent; /* No background */
+  		padding: 0; /* No padding */
+	}
+        .top-section {
+            background-color: #E5DDD6;
+            color: #22333B;
+            padding: 20px 10%;
+            display: flex;
+            flex-direction: column;
+	    min-height: 45vh;
+            position: relative;
+        }
 
-        nav {
-            background-color: #2B1810; 
-            padding: 15px 0;
-            text-align: center;
+	nav {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #E5DDD6;
+	    padding: 10px 10%;
         }
 
         nav a {
-            margin: 0 25px;
+            margin: 0 15px;
             text-decoration: none;
-            color: #F7F6F3; /* #2B1810; */
-            font-weight: 400;
-            font-size: 18px;
-            transition: color 0.3s ease;
-            display: inline-block;
+            color: #22333B;
         }
 
-        nav a:hover {
-            color: #E5DDD6; 
-        }
+	nav a:hover { 
+	    font-weight: bold; 
+	} 
 
-        .main {
+        .header {
+            margin-top: 30px;
             display: flex;
-            flex: 1; /* Fill remaining space */
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .text-section {
+            max-width: 50%;
+	    display: inline-block;
         }
 
-        .border {
-            background-color: #E5DDD6; 
-            width: 17%; /* Set border width */
-        }
-
-        .container {
-            text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px; /* Increased top padding from 20px to 40px */
-            width: 90%;
-            flex-grow: 1;
-            background-color: #F7F6F3;
-        }
-
-        .name-container {
-            display: inline-block;
-        }
-
-        h1 {
-            font-size: 48px;
+        .text-section h1 {
+            font-size: 40px;
             text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 2px;
-            margin-bottom: 1px;
-        }
-
-        .underline {
-            height: 2px;
-            background-color: #2B1810;
-            margin: 0 auto 20px;
-            width: 100%;
-        }
-
-        .tagline {
-            font-size: 18px;
-            color: #2B1810;
-            font-weight: 300;
-            font-style: italic;
-            margin-top: 15px;
-            margin-bottom: 30px;
-        }
-
-        .titles-group {
-            margin-bottom: 30px;
-        }
-
-        h2, h3 {
-            color: #2B1810;
-            font-weight: 300;
-            font-size: 18px;
             margin: 0;
-            line-height: 1.3;
         }
 
-        .profile-image {
-            width: 280px;
-            height: auto;
+	.tagline {
+            font-size: 16px;
+	    font-style: italic;
+	    margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 18px;
+	    font-weight: 300px;
+            margin: 3px 0;
+        }
+        .text-section .button {
+            margin-top: 20px;
+        }
+        .text-section .button button {
+            background-color: #22333B;
+            color: #f2f4f3;
+            border: none;
+            padding: 10px 30px;
+            cursor: pointer;
+            font-size: 16px;
             border-radius: 5px;
-            max-width: 100%;
         }
-
-
-}
-
-
-        /* Media Queries */
-       	@media screen and (min-width: 1024px) {
-    	    .container {
-            	padding-top: 60px; /* Even more spacing on larger screens */
-    	    }
+	.image-section {
+  		background-color: transparent; /* No background */
+  		padding: 0; /* No padding */
 	}
 
-	@media screen and (max-width: 1024px) {
-            .border {
-                display: none;
-            }
+        .image {
+ 		position: absolute;
+  		top: 10%;
+		right: 70px;
+  		max-width: 100%;
+  		height: auto;
+		margin-left: auto;
+            	flex-shrink: 0;
+            	width: 40%;
+            	max-height: 500px;
+	    	height: 65vh; 
+            	object-fit: contain;
+        }
+        .bottom-section {
+            background-color: #f2f4f3;
+            padding: 40px 10%;
+      	    padding-top: 10vh; /* Adjust this value if needed */
+	    min-height: 50vh;
+        }
+        .bottom-section h3 {
+            text-align: left;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        .bottom-section .content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .bottom-section .content div {
+            width: 48%;
         }
 
+
+
+/* Media Queries */
+
         @media screen and (max-width: 768px) {
-            h1 {
+	.top-section {
+	    padding-bottom: 0px;
+	    display: block;
+	    min-height: 30vh;
+	}
+	.text-section {
+            	max-width: 100%; 
+		text-align: center;
+		padding-bottom: 0px;
+	    }
+	.header {
+	    justify-content: center;
+	    padding-bottom: 0px;
+        }
+
+	nav {
+            justify-content: center;
+            background-color: #E5DDD6;
+	    padding: 10px 10%;
+        }
+
+	    h1 {
                 font-size: 36px;
+		text-align: center;
             }
 
 	   .tagline {
                 font-size: 16px;
+		max-width: 100%; 
             }
             nav a {
                 margin: 0 15px;
@@ -159,14 +182,34 @@
 	    h2, h3 {
                 font-size: 16px;
             }
+	    .image-section {
+		background-color: #E5DDD6; /* Set background color */
+  		padding: 1px 0; /* Adjust padding above and below */
+  		text-align: center; /* Center the image horizontally */
+	    }
 
-            .profile-image {
-                width: 240px;
-            }
+ 	    .image {
+		position: static; /* Remove absolute positioning */
+		padding: 0px;
+		margin: 0px auto; /* Center the image between sections */
+		width: 280px;
+  	     }
+	     .bottom-section {
+		padding-top: 10px;
+		}
+	     .bottom-section .content {
+    		display: block; /* Stack vertically */
+  		}
+
+ 	     .bottom-section .content div {
+    		width: 100%; /* Full width for each paragraph */
+   		margin-bottom: 16px; /* Optional: Add space between paragraphs */
+  		}
         }
 
-        @media screen and (max-width: 480px) {
-            h1 {
+        @media screen and (max-width: 480px) {            
+
+	    h1 {
                 font-size: 26px;
             }
 
@@ -182,14 +225,13 @@
                 font-size: 14px;
             }
 
-            .profile-image {
-                width: 200px;
-            }
+	    .image {
+		position: static; /* Remove absolute positioning */
+		display: block;
+		margin: 1px auto; /* Center the image between sections */
+		width: 280px;
+  	     }
 
-            .container {
-                padding: 15px;
-                width: 95%;
-            }
         }
     </style>
 </head>
@@ -200,21 +242,35 @@
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
     </nav>
-    <div class="main">
-        <div class="border"></div>
-        <div class="container">
-            <div class="name-container">
-                <h1>Dr. Andrea Freund</h1>
-                <div class="underline"></div>
-            </div>
-            <p class="tagline">Leadership rooted in science. Coaching customized to you.</p>
-            <div class="titles-group">
-                <h2>Executive Coach</h2>
-                <h3>PhD in Management & Organizations</h3>
-            </div>
-            <img src="assets/profile_image.jpg" alt="Dr. Andrea Freund" class="profile-image">
-        </div>
-        <div class="border"></div>
     </div>
+    <div class="main">
+    	<div class="top-section">
+        	<div class="header">
+            	<div class="text-section">
+                	<h1>Dr. Andrea Freund</h1>
+                	<p class="tagline">Leadership rooted in science. Coaching customized to you.</p>
+			<h2>Executive Coach</h2>
+                	<h2>PhD in Management</h2>
+                	<div class="button">
+                    		<button onclick="window.location.href='contact.html'">Get in Touch</button>
+                	</div>
+            	</div>
+       	 	</div>
+    	</div>
+	<div class="image-section">
+	<img class="image" src="assets/profile_image.jpg" alt="Dr. Andrea Freund">
+	</div>
+    	<div class="bottom-section">
+        	<h3>Why Coaching?</h3>
+        	<div class="content">
+            	<div>
+                	<p>A good coach you will help you focus in on what you actually want to achieve and design and execute the path to get there. I will partner with you to achieve your objectives as efficiently as possible, whether that is improving your effectiveness, growing faster in your career, or securing support for a new venture.</p>
+            	</div>
+            	<div>
+                	<p> Coaching is an investment, and good coaching is designed to give a positive return on that investment. If coaching allows you to improve your team’s productivity by even 10% or achieve a promotion 20% faster, that is real, quantifiable ROI that compounds over time.</p>
+            	</div>
+        	</div>
+    	</div>
+</div>
 </body>
 </html>
