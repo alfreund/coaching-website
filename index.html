@@ -3,276 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Open Graph Meta Tags -->
-	<meta property="og:title" content="Dr. Andrea Freund - Executive Coach">
-	<meta property="og:description" content="Leadership rooted in science. Coaching customized to you.">
-	<meta property="og:image" content="https://andreafreundcoaching.com/assets/profile_image_thumbnail.jpg">
-	<meta property="og:image:width" content="900">
-	<meta property="og:image:height" content="472">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="https://andreafreundcoaching.com/">
-    <!-- Twitter Card Meta Tags -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Dr. Andrea Freund - Executive Coach">
-	<meta name="twitter:description" content="Leadership rooted in science. Coaching customized to you.">
-	<meta name="twitter:image" content="https://andreafreundcoaching.com/assets/profile_image_thumbnail.jpg">
+    <meta property="og:title" content="Dr. Andrea Freund - Executive Coach">
+    <meta property="og:description" content="Leadership rooted in science. Coaching customized to you.">
+    <meta property="og:image" content="https://andreafreundcoaching.com/assets/profile_image_thumbnail.jpg">
+    <meta property="og:image:width" content="900">
+    <meta property="og:image:height" content="472">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://andreafreundcoaching.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dr. Andrea Freund - Executive Coach">
+    <meta name="twitter:description" content="Leadership rooted in science. Coaching customized to you.">
+    <meta name="twitter:image" content="https://andreafreundcoaching.com/assets/profile_image_thumbnail.jpg">
     <title>Dr. Andrea Freund - Executive Coach</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            font-family: 'Lato', sans-serif;
-	    color: #22333B;
-	    margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            height: 100vh; /* Ensure the body takes the full height */
-        }
-	.main { 
-		background-color: transparent; /* No background */
-  		padding: 0; /* No padding */
-	}
-        .top-section {
-            background-color: #E5DDD6;
-            color: #22333B;
-            padding: 20px 10%;
-            display: flex;
-            flex-direction: column;
-	    min-height: 45vh;
-            position: relative;
+        :root {
+            --primary-color: #22333B;
+            --bg-color: #E5DDD6;
+            --light-bg: #f2f4f3;
+            --content-padding: 10%;
         }
 
-	nav {
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--primary-color);
+            min-height: 100vh;
             display: flex;
-            justify-content: flex-end;
-            background-color: #E5DDD6;
-	    padding: 10px 10%;
+            flex-direction: column;
+        }
+
+        nav {
+            background-color: var(--light-bg);
+            padding: 1rem var(--content-padding);
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-logo {
+            height: 40px;
+            width: auto;
         }
 
         nav a {
-            margin: 0 15px;
+            margin-right: 1.5rem;
             text-decoration: none;
-            color: #22333B;
+            color: var(--primary-color);
+            transition: font-weight 0.2s;
         }
 
-	nav a:hover { 
-	    font-weight: bold; 
-	} 
-
-        .header {
-            margin-top: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
+        nav a:hover {
+            font-weight: bold;
         }
+
+        .top-section {
+            background-color: var(--bg-color);
+            padding: 3rem var(--content-padding);
+            min-height: 45vh;
+            position: relative;
+        }
+
         .text-section {
             max-width: 50%;
-	    display: inline-block;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding-bottom: 2rem;
         }
 
-        .text-section h1 {
-            font-size: 40px;
+        h1 {
+            font-size: 2.5rem;
             text-transform: uppercase;
-            margin: 0;
+            line-height: 1.2;
         }
 
-	.tagline {
-            font-size: 16px;
-	    font-style: italic;
-	    margin-top: 20px;
-            margin-bottom: 20px;
+        .tagline {
+            font-size: 1.1rem;
+            font-style: italic;
+	    
         }
+
         h2 {
-            font-size: 18px;
-	    font-weight: 300px;
-            margin: 3px 0;
+            font-size: 1.125rem;
+            font-weight: 300;
+            line-height: 1.5;
         }
-        .text-section .button {
-            margin-top: 20px;
+
+        .button {
+            margin-top: 1rem;
         }
-        .text-section .button button {
-            background-color: #22333B;
-            color: #f2f4f3;
+
+        .button button {
+            background-color: var(--primary-color);
+            color: var(--light-bg);
             border: none;
-            padding: 10px 30px;
-            cursor: pointer;
-            font-size: 16px;
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
             border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.2s;
         }
-	.image-section {
-  		background-color: transparent; /* No background */
-  		padding: 0; /* No padding */
-	}
+
+        .button button:hover {
+            opacity: 0.9;
+        }
+
+        .image-section {
+            position: absolute;
+	    padding: 20px;
+	    left: 55%;
+            /*right: 15%; */
+            top: 10%;
+            width: 40%;
+            /* height: 65vh; */
+	    max-width: 400px;
+            z-index: 1;
+        }
 
         .image {
- 		position: absolute;
-  		top: 10%;
-		right: 70px;
-  		max-width: 100%;
-  		height: auto;
-		margin-left: auto;
-            	flex-shrink: 0;
-            	width: 40%;
-            	max-height: 500px;
-	    	height: 65vh; 
-            	object-fit: contain;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
+
         .bottom-section {
-            background-color: #f2f4f3;
-            padding: 40px 10%;
-      	    padding-top: 10vh; /* Adjust this value if needed */
-	    min-height: 50vh;
+            background-color: var(--light-bg);
+            padding: 4rem var(--content-padding);
+            padding-top: 6rem;
+            flex: 1;
+            min-height: 50vh;
+            position: relative;
         }
+
         .bottom-section h3 {
-            text-align: left;
-            font-size: 28px;
-            margin-bottom: 20px;
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
         }
-        .bottom-section .content {
+
+        .content {
             display: flex;
-            justify-content: space-between;
-	   
-        }
-        .bottom-section .content div {
-            width: 48%;
-	    line-height: 1.8;
+            gap: 2rem;
+            position: relative;
+            z-index: 2;
         }
 
+        .content div {
+            flex: 1;
+            line-height: 1.8;
+        }
 
+        @media screen and (max-width: 1024px) {
+            .text-section {
+                max-width: 45%;
+            }
 
-/* Media Queries */
+            .image-section {
+                width: 45%;
+            }
+        }
 
         @media screen and (max-width: 768px) {
-	.top-section {
-	    padding-bottom: 0px;
-	    display: block;
-	    min-height: 30vh;
-	}
-	.text-section {
-            	max-width: 100%; 
-		text-align: center;
-		padding-bottom: 0px;
-	    }
-	.header {
-	    justify-content: center;
-	    padding-bottom: 0px;
-        }
-
-	nav {
-            justify-content: center;
-            background-color: #E5DDD6;
-	    padding: 10px 10%;
-        }
-
-	    h1 {
-                font-size: 36px;
-		text-align: center;
+            nav {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                gap: 1rem;
             }
 
-	   .tagline {
-                font-size: 16px;
-		max-width: 100%; 
+            .nav-logo {
+                height: 30px;
             }
+
             nav a {
-                margin: 0 15px;
-                font-size: 16px;
+                margin-right: 1rem;
             }
 
-	    h2, h3 {
-                font-size: 16px;
+            .top-section {
+                min-height: auto;
+                padding: 2rem var(--content-padding);
             }
-	    .image-section {
-		background-color: #E5DDD6; /* Set background color */
-  		padding: 1px 0; /* Adjust padding above and below */
-  		text-align: center; /* Center the image horizontally */
-	    }
 
- 	    .image {
-		position: static; /* Remove absolute positioning */
+            .text-section {
+                max-width: 100%;
+                text-align: center;
+                align-items: center;
+                gap: 1rem;
+                padding-bottom: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .image-section {
+                position: static;
 		padding: 0px;
-		margin: 0px auto; /* Center the image between sections */
-		width: 280px;
-  	     }
-	     .bottom-section {
-		padding-top: 10px;
-		}
-	     .bottom-section .content {
-    		display: block; /* Stack vertically */
-  		}
+		width: 100%;
+                height: auto;
+		max-width: 100%;
+                background-color: var(--bg-color);
+                padding: 1rem 0;
+                text-align: center;
+            }
 
- 	     .bottom-section .content div {
-    		width: 100%; /* Full width for each paragraph */
-   		margin-bottom: 16px; /* Optional: Add space between paragraphs */
-  		}
+            .image {
+                padding: 0px;
+		max-width: 280px;
+                margin: 0 auto;
+                display: block;
+            }
+
+            .content {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .bottom-section {
+                padding: 3rem var(--content-padding);
+            }
         }
 
-        @media screen and (max-width: 480px) {            
-
-	    h1 {
-                font-size: 26px;
-            }
-
-	    .tagline {
-                font-size: 16px;
-            }
-
-	    h2, h3 {
-                font-size: 16px;
-            }
+        @media screen and (max-width: 480px) {
             nav a {
-                margin: 0 10px;
-                font-size: 14px;
+                font-size: 0.875rem;
             }
 
-	    .image {
-		position: static; /* Remove absolute positioning */
-		display: block;
-		margin: 1px auto; /* Center the image between sections */
-		width: 280px;
-  	     }
+            .nav-logo {
+                height: 25px;
+            }
 
+            h1 {
+                font-size: 1.625rem;
+            }
+
+            .bottom-section h3 {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <nav>
+        <img src="assets/logo.png" alt="Dr. Andrea Freund Logo" class="nav-logo">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
     </nav>
-    </div>
-    <div class="main">
-    	<div class="top-section">
-        	<div class="header">
-            	<div class="text-section">
-                	<h1>Dr. Andrea Freund</h1>
-                	<p class="tagline">Leadership rooted in science. Coaching customized to you.</p>
-			<h2>Executive Coach</h2>
-                	<h2>PhD in Management</h2>
-                	<div class="button">
-                    		<button onclick="window.location.href='contact.html'">Get in Touch</button>
-                	</div>
-            	</div>
-       	 	</div>
-    	</div>
-	<div class="image-section">
-	<img class="image" src="assets/profile_image.jpg" alt="Dr. Andrea Freund">
-	</div>
-    	<div class="bottom-section">
-        	<h3>Why Coaching?</h3>
-        	<div class="content">
-            	<div>
-                	<p>A good coach you will help you focus in on what you actually want to achieve and design and execute the path to get there. I will partner with you to achieve your objectives as efficiently as possible, whether that is improving your effectiveness, growing faster in your career, or securing support for a new venture.</p>
-            	</div>
-            	<div>
-                	<p> Coaching is an investment, and good coaching is designed to give a positive return on that investment. If coaching allows you to improve your team’s productivity by even 10% or achieve a promotion 20% faster, that is real, quantifiable ROI that compounds over time.</p>
-            	</div>
-        	</div>
-    	</div>
-</div>
+    <main>
+        <section class="top-section">
+            <div class="text-section">
+                <h1>Dr. Andrea Freund</h1>
+                <p class="tagline">Leadership rooted in science. Coaching customized to you.</p>
+                <h2><p>Executive Coach</p>
+                <p>PhD in Management</p></h2>
+                <div class="button">
+                    <button onclick="window.location.href='contact.html'">Get in Touch</button>
+                </div>
+            </div>
+        </section>
+        <div class="image-section">
+            <img class="image" src="assets/profile_image.jpg" alt="Dr. Andrea Freund">
+        </div>
+        <section class="bottom-section">
+            <h3>Why Coaching?</h3>
+            <div class="content">
+                <div>
+                    <p>A good coach will help you focus in on what you actually want to achieve and design and execute the path to get there. I will partner with you to achieve your objectives as efficiently as possible, whether that is improving your effectiveness, growing faster in your career, or securing support for a new venture.</p>
+                </div>
+                <div>
+                    <p>Coaching is an investment, and good coaching is designed to give a positive return on that investment. If coaching allows you to improve your team's productivity by even 10% or achieve a promotion 20% faster, that is real, quantifiable ROI that compounds over time.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
