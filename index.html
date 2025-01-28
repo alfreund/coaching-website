@@ -231,8 +231,7 @@
                 padding: 3rem var(--content-padding);
             }
         }
-
-        @media screen and (max-width: 480px) {
+    @media screen and (max-width: 480px) {
     nav {
         flex-direction: column;
         align-items: center;
@@ -241,12 +240,14 @@
 
     .nav-logo {
         height: 25px;
-        margin: 0; /* Remove any margin */
+        margin: 0;
     }
 
     .nav-links {
-        justify-content: center;
-        gap: 1rem; /* Slightly smaller gap between links */
+        width: 100%; /* Take full width */
+        display: flex;
+        justify-content: space-evenly; /* Spread links evenly */
+        gap: 0; /* Remove gap since we're using space-evenly */
     }
 
     nav a {
