@@ -8,10 +8,47 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #22333B;
+            --bg-color: #E5DDD6;
+            --light-bg: #f2f4f3;
+            --content-padding: 10%;
+        }
+
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+
+        nav {
+            background-color: var(--light-bg);
+            padding: 1rem var(--content-padding);
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+	    border-bottom: 1px solid var(--primary-color);
+        }
+
+        .nav-logo {
+            height: 40px;
+            width: auto;
+        }
+
+	.nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+	    
+        nav a {
+            margin-right: 1.5rem;
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: font-weight 0.2s;
+        }
+
+        nav a:hover {
+            font-weight: bold;
         }
 
         body {
@@ -19,31 +56,11 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #F7F6F3;
+            background-color: var(--light-bg);
             color: #22333B;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-        }
-
-        nav {
-            background-color: #22333B;
-            padding: 15px 0;
-            text-align: center;
-        }
-
-        nav a {
-            margin: 0 25px;
-            text-decoration: none;
-            color: #F7F6F3;
-            font-weight: 400;
-            font-size: 18px;
-            transition: color 0.3s ease;
-            display: inline-block;
-        }
-
-        nav a:hover {
-            color: #E5DDD6;
         }
 
         .main {
@@ -52,7 +69,7 @@
         }
 
   	.border {
-            background-color: #E5DDD6; 
+            background-color: var(--bg-color); 
             width: 17%; /* Set border width */
         }
 
@@ -63,7 +80,7 @@
             padding: 40px 20px;
             width: 90%;
             flex-grow: 1;
-            background-color: #F7F6F3;
+            background-color: var(--light-bg);
         }
 
         .name-container {
@@ -96,9 +113,18 @@
 
 	@media screen and (max-width: 768px) {
             
+            nav {
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .nav-logo {
+                height: 30px;
+            }
+
             nav a {
-                margin: 0 15px;
-                font-size: 16px;
+                margin-right: 1rem;
             }
 
             .container {
@@ -108,10 +134,32 @@
 
         @media screen and (max-width: 480px) {
 
-            nav a {
-                margin: 0 10px;
-                font-size: 14px;
-            }
+                nav {
+        		flex-direction: column;
+        		align-items: center;
+        		gap: 0.75rem;
+        		padding: 0.75rem 0; /* Remove horizontal padding from nav */
+    		}
+
+    		.nav-logo {
+        		height: 25px;
+        		margin: 0;
+        		padding: 0 var(--content-padding); /* Add padding to logo container */
+   		}
+
+    		.nav-links {
+        		width: 100%;
+        		display: flex;
+        		flex-wrap: nowrap;
+        		justify-content: space-between;
+        		padding: 0 var(--content-padding); /* Match the content padding */
+    		}	
+
+    		nav a {
+        		font-size: 0.875rem;
+       			white-space: nowrap;
+        		flex: 0 1 auto;
+    		}
 
             .container {
                 padding: 20px 15px;
@@ -126,10 +174,13 @@
 </head>
 <body>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+        <img src="assets/logo.png" alt="Dr. Andrea Freund Logo" class="nav-logo">
+	<div class="nav-links">
+        	<a href="index.html">Home</a>
+        	<a href="about.html">About</a>
+        	<a href="services.html">Services</a>
+        	<a href="contact.html">Contact</a>
+	</div>
     </nav>
     <div class="main">
         <div class="container">
