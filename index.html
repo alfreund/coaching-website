@@ -33,6 +33,11 @@
             box-sizing: border-box;
         }
 
+	html {
+    	    display: table;
+   	    margin: auto;
+        }
+
 	.border-top {
             background-color: var(--bg-color); 
 	    min-height: 45vh;
@@ -61,8 +66,10 @@
             color: var(--primary-color);
 	    line-height: 1.6;
             min-height: 100vh;
-            display: flex;
+            /* display: flex; */
             flex-direction: column;
+	    vertical-align: middle;
+	    max-width: 2000px; 
         }
 
         nav {
