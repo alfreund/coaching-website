@@ -33,20 +33,33 @@
             box-sizing: border-box;
         }
 
-	html {
-    	    display: table;
-   	    margin: auto;
-        }
 
+	html {
+		background: #EBE4DE;
+		padding: 0px;
+		margin: 0px;
+	} 
+
+	.container {
+    		margin: 0 auto;
+   		max-width: 2000px;
+   		width: 100%; 
+		border-left: 2px solid var(--primary-color);
+    		border-right: 2px solid var(--primary-color);
+		padding: 0px;
+		margin: 0px;
+	}
+	
+	
         body {
             font-family: 'Lato', sans-serif;
             color: var(--primary-color);
 	    line-height: 1.6;
             min-height: 100vh;
-            /* display: flex; */
-            flex-direction: column;
-	    vertical-align: middle;
-	    max-width: 2000px;
+            display: flex; 
+	    justify-content: center;
+	    margin: 0px;
+	    padding; 0px;
         }
 
         nav {
@@ -139,7 +152,7 @@
 	    left: 55%;
             top: 70px;
             width: 40%;
-	    max-width: 900px;
+	    max-width: 800px;
             z-index: 1;
         }
 
@@ -183,7 +196,7 @@
             flex: 1;
             line-height: 1.8;
         }
-	    
+
 @media screen and (max-width: 2000px), screen and (max-height: 1500px) {
 	.image-section {
 	  max-width: 600px;
@@ -192,9 +205,13 @@
 	.image {
 	  max-height: 550px;
 	}
+
+	.container {
+		border: none;
+	}
 }	
-	
-@media screen and (max-width: 1650px) {
+
+@media screen and (max-width: 1600px) {
 	nav {
 	    padding: 1rem var(--content-padding);
 	}
@@ -320,6 +337,7 @@
     </style>
 </head>
 <body>
+<div class="container">
     <nav>
         <img src="assets/logo.png" alt="Dr. Andrea Freund Logo" class="nav-logo">
 	<div class="nav-links">
@@ -356,5 +374,6 @@
             </div>
         </section>
     </main>
+</div>
 </body>
 </html>
