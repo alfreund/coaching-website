@@ -35,25 +35,48 @@
 
 
 	html {
-		background: #EBE4DE;
+		background:var(--light-bg);
 		padding: 0px;
 		margin: 0px;
 	} 
+
+	main { 
+        	height: 100vh;
+		margin: 0px;
+        	padding: 0px;
+		box-sizing: border-box;
+		background: var(--light-bg);
+	}
+
+	.nav-wrapper {
+    		background-color: var(--light-bg);
+    		width: 100vw;
+    		margin-left: calc(-50vw + 50%);
+    		margin-right: calc(-50vw + 50%);
+	}
+
+	.top-wrapper {
+    		background-color: var(--bg-color);
+    		width: 100vw;
+    		margin-left: calc(-50vw + 50%);
+    		margin-right: calc(-50vw + 50%);
+	}
+
+	.bottom-wrapper {
+    		background-color: var(--light-bg);
+    		width: 100vw;
+    		margin-left: calc(-50vw + 50%);
+   		 margin-right: calc(-50vw + 50%);
+	}
 
 	.container {
     		margin: 0 auto;
    		max-width: 2000px;
    		width: 100%; 
-		border-left: 2px solid var(--primary-color);
-    		border-right: 2px solid var(--primary-color);
-		padding: 0px;
-		margin: 0px;
+		justify-content: center;	
 	}
 	
-	main {
-		background: var(--light-bg);
-		height: 100vh;
-	}
+	
         body {
             font-family: 'Lato', sans-serif;
             color: var(--primary-color);
@@ -172,6 +195,7 @@
             background-color: var(--light-bg);
             padding: 4rem var(--content-padding);
             padding-top: 6rem;
+	    padding-bottom: 0px;
             flex: 1;
             min-height: 50vh;
             position: relative;
@@ -200,11 +224,6 @@
             line-height: 1.8;
         }
 
-@media screen and (max-width: 2000px) {
-	.container {
-		border: none;
-	}
-}	
 @media screen and (max-width: 2000px), screen and (max-height: 1500px) {
 	.image-section {
 	  max-width: 600px;
@@ -212,6 +231,10 @@
 
 	.image {
 	  max-height: 550px;
+	}
+
+	.container {
+		border: none;
 	}
 }	
 
@@ -350,7 +373,8 @@
     </style>
 </head>
 <body>
-<div class="container">
+    <main>
+<div class="nav-wrapper">
     <nav>
         <img src="assets/logo.png" alt="Dr. Andrea Freund Logo" class="nav-logo">
 	<div class="nav-links">
@@ -360,7 +384,9 @@
         	<a href="contact.html">Contact</a>
 	</div>
     </nav>
-    <main>
+</div>
+ <div class="top-wrapper">
+<div class="container">
         <section class="top-section">
             <div class="text-section">
                 <h1>Dr. Andrea Freund</h1>
@@ -371,10 +397,16 @@
                     <button onclick="window.location.href='contact.html'">Get in Touch</button>
                 </div>
             </div>
+
         </section>
         <div class="image-section">
             <img class="image" src="assets/profile_image.jpg" alt="Dr. Andrea Freund">
         </div>
+</div>
+</div>
+
+<div class="bottom-wrapper">
+<div class="container">
         <section class="bottom-section">
             <h3>Why Coaching?</h3>
             <div class="content">
@@ -386,6 +418,8 @@
                 </div>
             </div>
         </section>
+</div>
+</div>
     </main>
 </div>
 </body>
