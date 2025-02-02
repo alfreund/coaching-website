@@ -211,7 +211,7 @@
 	}
 }	
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1600px), screen and (max-height: 800px) {
 	nav {
 	    padding: 1rem var(--content-padding);
 	}
@@ -227,6 +227,10 @@
 	    padding-right: 0px;
 	}
 
+	.top-section {
+                min-height: auto;
+                padding: 5rem var(--content-padding);
+             }
         @media screen and (max-width: 1024px) {
             .text-section {
                 max-width: 45%;
@@ -235,6 +239,11 @@
             .image-section {
                 width: 45%;
             }
+
+	    .top-section {
+                min-height: auto;
+                padding: 2rem var(--content-padding);
+             }
         }
 
         @media screen and (max-width: 768px) {
@@ -255,8 +264,8 @@
 
             .top-section {
                 min-height: auto;
-                padding: 1rem var(--content-padding);
-            }
+                padding: 2rem var(--content-padding);
+             }
 
             .text-section {
                 max-width: 100%;
